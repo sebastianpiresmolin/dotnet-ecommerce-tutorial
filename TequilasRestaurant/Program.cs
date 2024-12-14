@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TequilasRestaurant.Data;
 using TequilasRestaurant.Models;
@@ -38,8 +37,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    "default",
+    "{controller=Ingredient}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
